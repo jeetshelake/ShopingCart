@@ -1,0 +1,20 @@
+.loginContainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.loginHeader{
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.loginButton{
+    background-color: blueviolet;
+}
+.newStudent{
+    font-family: monospace;
+    font-size: 20px;
+}
