@@ -11,14 +11,18 @@ import CardContent from '@mui/material/CardContent';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import "./Login.css";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Login = () => {
+  const navigate = useNavigate()
+
+  const goToPage = () => navigate('/pages')
+
+
   return (
     <div className='loginContainer'>
       <Card sx={{ minWidth: 275, height: 500, width: 500}} className='card'>
         <CardContent>
-          <br></br>
           <br></br>
           <h1 className='loginHeader'>Login</h1>
           <br></br>
@@ -31,10 +35,10 @@ const Login = () => {
             <br></br>
           </Box>
           <Stack spacing={1} direction="row">
-            <Button variant="contained" className='loginButton' fullWidth sx={{backgroundColor:'rgb(237, 24, 173)'}}>Login</Button>
+            <Button variant="contained" className='loginButton' fullWidth sx={{backgroundColor:'rgb(237, 24, 173)'}} onClick={goToPage}>Login</Button>
           </Stack>
           <br></br>
-          <h4 className='newStudent'>new student?   <Link to={'/pages'} >Register_Here!</Link></h4>
+          <h4 className='newStudent'>new student?   <Link to={'/pages'} >Register-Here!</Link></h4>
         </CardContent>
       </Card>
     </div>
